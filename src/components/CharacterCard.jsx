@@ -16,7 +16,7 @@ const CharacterCard = ({ character }) => {
       boxShadow: "2xl",
       transform: "scale(1.05)",
       cursor: "pointer",
-      bg: "gray.900",
+      bg: "gray.950",
       color: "white",
       }}
     >
