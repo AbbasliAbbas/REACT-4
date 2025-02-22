@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { SimpleGrid, Spinner, Text, Container } from "@chakra-ui/react";
+import { SimpleGrid, Spinner, Text, Container, } from "@chakra-ui/react";
 import CharacterCard from "./components/CharacterCard";
-
+import { Heading } from "@chakra-ui/react";
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,7 +26,9 @@ const App = () => {
   }, []);
 
   return (
+
     <Container maxW="container.xl" py={5}>
+         <Heading  fontSize="20px" mb={4} textAlign={"center"}>Rick and Morty Characters</Heading> 
       {loading && <Spinner size="xl" />}
       {error && <Text color="red.500">{error}</Text>}
       <SimpleGrid columns={[1, 2, 3, 4]} spacing={6}>
